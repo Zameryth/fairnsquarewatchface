@@ -30,21 +30,21 @@ function loadOptions() {
   var $bgcolor = document.getElementById('bgcolor');
   var $datecolor = document.getElementById('datecolor');
 
-  if (localStorage.weather) {
-    $hourTens.value = localStorage.hourTens;
-    $hourOnes.value = localStorage.hourOnes;
-    $minTens.value = localStorage.minTens;
-    $minOnes.value = localStorage.minOnes;
-    $topLeft.value = localStorage.topLeft;
-    $topLeftType.value = localStorage.topLeftType;
-    $botLeft.value = localStorage.botLeft;
-    $botLeftType.value = localStorage.botLeftType;
-    $topRight.value = localStorage.topRight;
-    $topRightType.value = localStorage.topRightType;
-    $botRight.value = localStorage.botRight;
-    $botRightType.value = localStorage.botRightType;
-    $bgcolor.value = localStorage.bgcolor;
-    $datecolor.value = localStorage.datecolor;
+  if (window.localStorage.hourTens) {
+    $hourTens.value = window.localStorage.hourTens;
+    $hourOnes.value = window.localStorage.hourOnes;
+    $minTens.value = window.localStorage.minTens;
+    $minOnes.value = window.localStorage.minOnes;
+    $topLeft.value = window.localStorage.topLeft;
+    $topLeftType.value = window.localStorage.topLeftType;
+    $botLeft.value = window.localStorage.botLeft;
+    $botLeftType.value = window.localStorage.botLeftType;
+    $topRight.value = window.localStorage.topRight;
+    $topRightType.value = window.localStorage.topRightType;
+    $botRight.value = window.localStorage.botRight;
+    $botRightType.value = window.localStorage.botRightType;
+    $bgcolor.value = window.localStorage.bgcolor;
+    $datecolor.value = window.localStorage.datecolor;
   }
 }
 
@@ -81,20 +81,20 @@ function getAndStoreConfigData() {
     datecolor: $datecolor.value,
   };
 
-  localStorage.hourTens = options.hourTens;
-  localStorage.hourOnes = options.hourOnes;
-  localStorage.minTens = options.minTens;
-  localStorage.minOnes = options.minOnes;
-  localStorage.topLeft = options.topLeft;
-  localStorage.topLeftType = options.topLeftType;
-  localStorage.botLeft = options.botLeft;
-  localStorage.botLeftType = options.botLeftType;
-  localStorage.topRight = options.topRight;
-  localStorage.topRightType = options.topRightType;
-  localStorage.botRight = options.botRight;
-  localStorage.botRightType = options.botRightType;
-  localStorage.bgcolor = options.bgcolor;
-  localStorage.datecolor = options.datecolor;
+  window.localStorage.hourTens = options.hourTens;
+  window.localStorage.hourOnes = options.hourOnes;
+  window.localStorage.minTens = options.minTens;
+  window.localStorage.minOnes = options.minOnes;
+  window.localStorage.topLeft = options.topLeft;
+  window.localStorage.topLeftType = options.topLeftType;
+  window.localStorage.botLeft = options.botLeft;
+  window.localStorage.botLeftType = options.botLeftType;
+  window.localStorage.topRight = options.topRight;
+  window.localStorage.topRightType = options.topRightType;
+  window.localStorage.botRight = options.botRight;
+  window.localStorage.botRightType = options.botRightType;
+  window.localStorage.bgcolor = options.bgcolor;
+  window.localStorage.datecolor = options.datecolor;
 
   console.log('Got options: ' + JSON.stringify(options));
   return options;
