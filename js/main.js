@@ -27,6 +27,8 @@ function loadOptions() {
   var $botLeftType = document.getElementById('botLeftType');
   var $botRight = document.getElementById('botRight');
   var $botRightType = document.getElementById('botRightType');
+  var $bgcolor = document.getElementById('bgcolor');
+  var $datecolor = document.getElementById('datecolor');
 
   if (localStorage.weather) {
     $hourTens.value = localStorage.hourTens;
@@ -41,6 +43,8 @@ function loadOptions() {
     $topRightType.value = localStorage.topRightType;
     $botRight.value = localStorage.botRight;
     $botRightType.value = localStorage.botRightType;
+    $bgcolor.value = localStorage.bgcolor;
+    $datecolor.value = localStorage.datecolor;
   }
 }
 
@@ -57,6 +61,8 @@ function getAndStoreConfigData() {
   var $botLeftType = document.getElementById('botLeftType');
   var $botRight = document.getElementById('botRight');
   var $botRightType = document.getElementById('botRightType');
+  var $bgcolor = document.getElementById('bgcolor');
+  var $datecolor = document.getElementById('datecolor');
 
   var options = {
     hourTens: $hourTens.value,
@@ -71,6 +77,8 @@ function getAndStoreConfigData() {
     topLeftType: $topLeftType.value,
     botLeft: $botLeft.value,
     botLeftType: $botLeftType.value,
+    bgcolor: $bgcolor.value,
+    datecolor: $datecolor.value,
   };
 
   localStorage.hourTens = options.hourTens;
@@ -85,6 +93,8 @@ function getAndStoreConfigData() {
   localStorage.topRightType = options.topRightType;
   localStorage.botRight = options.botRight;
   localStorage.botRightType = options.botRightType;
+  localStorage.bgcolor = options.bgcolor;
+  localStorage.datecolor = options.datecolor;
 
   console.log('Got options: ' + JSON.stringify(options));
   return options;
