@@ -20,9 +20,13 @@ function loadOptions() {
   var $minTens = document.getElementById('minTens');
   var $minOnes = document.getElementById('minOnes');
   var $topLeft = document.getElementById('topLeft');
+  var $topLeftType = document.getElementById('topLeftType');
   var $topRight = document.getElementById('topRight');
+  var $topRightType = document.getElementById('topRightType');
   var $botLeft = document.getElementById('botLeft');
+  var $botLeftType = document.getElementById('botLeftType');
   var $botRight = document.getElementById('botRight');
+  var $botRightType = document.getElementById('botRightType');
 
   if (localStorage.weather) {
     $hourTens.value = localStorage.hourTens;
@@ -30,9 +34,13 @@ function loadOptions() {
     $minTens.value = localStorage.minTens;
     $minOnes.value = localStorage.minOnes;
     $topLeft.value = localStorage.topLeft;
+    $topLeftType.value = localStorage.topLeftType;
     $botLeft.value = localStorage.botLeft;
+    $botLeftType.value = localStorage.botLeftType;
     $topRight.value = localStorage.topRight;
+    $topRightType.value = localStorage.topRightType;
     $botRight.value = localStorage.botRight;
+    $botRightType.value = localStorage.botRightType;
   }
 }
 
@@ -42,9 +50,13 @@ function getAndStoreConfigData() {
   var $minTens = document.getElementById('minTens');
   var $minOnes = document.getElementById('minOnes');
   var $topLeft = document.getElementById('topLeft');
+  var $topLeftType = document.getElementById('topLeftType');
   var $topRight = document.getElementById('topRight');
+  var $topRightType = document.getElementById('topRightType');
   var $botLeft = document.getElementById('botLeft');
+  var $botLeftType = document.getElementById('botLeftType');
   var $botRight = document.getElementById('botRight');
+  var $botRightType = document.getElementById('botRightType');
 
   var options = {
     hourTens: $hourTens.value,
@@ -52,9 +64,13 @@ function getAndStoreConfigData() {
     minTens: $minTens.value,
     minOnes: $minOnes.value,
     topRight: $topRight.value,
+    topRightType: $topRightType.value,
     botRight: $botRight.value,
+    botRightType: $botRightType.value,
     topLeft: $topLeft.value,
+    topLeftType: $topLeftType.value,
     botLeft: $botLeft.value,
+    botLeftType: $botLeftType.value,
   };
 
   localStorage.hourTens = options.hourTens;
@@ -62,9 +78,13 @@ function getAndStoreConfigData() {
   localStorage.minTens = options.minTens;
   localStorage.minOnes = options.minOnes;
   localStorage.topLeft = options.topLeft;
+  localStorage.topLeftType = options.topLeftType;
   localStorage.botLeft = options.botLeft;
+  localStorage.botLeftType = options.botLeftType;
   localStorage.topRight = options.topRight;
+  localStorage.topRightType = options.topRightType;
   localStorage.botRight = options.botRight;
+  localStorage.botRightType = options.botRightType;
 
   console.log('Got options: ' + JSON.stringify(options));
   return options;
