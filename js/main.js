@@ -1,6 +1,7 @@
 (function() {
   loadOptions();
   submitHandler();
+
 })();
 
 function submitHandler() {
@@ -22,9 +23,11 @@ function close() {
 function load_js() {
       var head= document.getElementsByTagName('head')[0];
       var script= document.createElement('script');
+      script.type= 'text/javascript';
       script.src= 'bower_components/pebble-slate/dist/js/slate.min.js';
       head.appendChild(script);
 }
+
 
 function spectrum() {
   var $hourTens = document.getElementById('hourTens');
@@ -55,6 +58,7 @@ function spectrum() {
   $botRightType.value = 1;
   $bgcolor.value = "0x000000";
   $datecolor.value = "0xFFFFFF";
+  load_js();
 }
 
 function playfulstamps() {
@@ -86,6 +90,7 @@ function playfulstamps() {
   $botRightType.value = 7;
   $bgcolor.value = "0x5500AA";
   $datecolor.value = "0xFFFFFF";
+  load_js();
 }
 
 
@@ -118,6 +123,7 @@ function jazzyred() {
   $botRightType.value = 4;
   $bgcolor.value = "0x550000";
   $datecolor.value = "0xFFFFFF";
+  load_js();
 }
 
 
@@ -137,19 +143,20 @@ function coolblue() {
   var $bgcolor = document.getElementById('bgcolor');
   var $datecolor = document.getElementById('datecolor');
   $hourTens.value = "0x00FFFF";
-  $hourOnes.value = "0x00FFFF";
-  $minTens.value = "0x00FFFF";
+  $hourOnes.value = "0x0055AA";
+  $minTens.value = "0x0055AA";
   $minOnes.value = "0x00FFFF";
   $topLeft.value = "0x00FFFF";
   $topLeftType.value = 2;
-  $botLeft.value = "0x0055AA";
+  $botLeft.value = "0x00FFFF";
   $botLeftType.value = 0;
-  $topRight.value = "0x0055AA";
+  $topRight.value = "0x00FFFF";
   $topRightType.value = 0;
   $botRight.value = "0x00FFFF";
   $botRightType.value = 2;
   $bgcolor.value = "0x0055AA";
   $datecolor.value = "0xFFFFFF";
+  load_js();
 }
 
 
@@ -182,6 +189,7 @@ function forestgreen() {
   $botRightType.value = 5;
   $bgcolor.value = "0x005500";
   $datecolor.value = "0x00FFAA";
+  load_js();
 }
 
 function original() {
@@ -213,6 +221,7 @@ function original() {
   $botRightType.value = 0;
   $bgcolor.value = "0x000000";
   $datecolor.value = "0xFFFFFF";
+  load_js();
 }
 
 function loadOptions() {
