@@ -70,8 +70,6 @@ function spectrum() {
   $bgcolor.value = "0x000000";
   $datecolor.value = "0xFFFFFF";
   load_js();
-  var money = getParameterByName('money');
-  console.log(money);
 }
 
 function playfulstamps() {
@@ -103,6 +101,8 @@ function playfulstamps() {
   $botRightType.value = 7;
   $bgcolor.value = "0x5500AA";
   $datecolor.value = "0xFFFFFF";
+    var money = getParameterByName('money');
+  console.log(money);
   load_js();
 }
 
