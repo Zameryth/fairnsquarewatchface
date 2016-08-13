@@ -15,16 +15,6 @@ function submitHandler() {
   });
 }
 
-function getParameterByName(name, url) {
-    if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
-}
-
 
 function close() {
   var return_to = getQueryParam('return_to', 'pebblejs://close#');
@@ -101,8 +91,6 @@ function playfulstamps() {
   $botRightType.value = 7;
   $bgcolor.value = "0x5500AA";
   $datecolor.value = "0xFFFFFF";
-    var money = getParameterByName('money');
-  console.log(money);
   load_js();
 }
 
