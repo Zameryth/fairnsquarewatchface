@@ -15,6 +15,16 @@ function submitHandler() {
   });
 }
 
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,    
+    function(m,key,value) {
+      vars[key] = value;
+    });
+    return vars;
+  }
+
+
 function close() {
   var return_to = getQueryParam('return_to', 'pebblejs://close#');
   document.location = return_to;
@@ -59,6 +69,8 @@ function spectrum() {
   $bgcolor.value = "0x000000";
   $datecolor.value = "0xFFFFFF";
   load_js();
+  var fType = getUrlVars()["type"];
+  console.log(fType);
 }
 
 function playfulstamps() {
