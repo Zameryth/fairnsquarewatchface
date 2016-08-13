@@ -15,14 +15,15 @@ function submitHandler() {
   });
 }
 
-function getUrlVars() {
-    var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,    
-    function(m,key,value) {
-      vars[key] = value;
-    });
-    return vars;
-  }
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
 
 
 function close() {
@@ -69,8 +70,8 @@ function spectrum() {
   $bgcolor.value = "0x000000";
   $datecolor.value = "0xFFFFFF";
   load_js();
-  var fType = getUrlVars()["money"];
-  console.log(fType);
+  var money = getParameterByName('money');
+  console.log(money);
 }
 
 function playfulstamps() {
