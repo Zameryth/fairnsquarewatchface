@@ -69,7 +69,7 @@ function spectrum() {
   $bgcolor.value = "0x000000";
   $datecolor.value = "0xFFFFFF";
   load_js();
-  var fType = getUrlVars()["type"];
+  var fType = getUrlVars()["money"];
   console.log(fType);
 }
 
